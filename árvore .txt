@@ -1,0 +1,38 @@
+Class Node:
+
+ Def __init__(self, value):
+
+ Self.value = value
+ Self.left = None
+ Self.right = None
+Def insert(root, value):
+ If root is None:
+ Return Node(value)
+ Elif value < root.value:
+ Root.left = insert(root.left, value)
+ Else:
+ Root.right = insert(root.right, value)
+ Return root
+Def search(root, value):
+ If root is None:
+ Return False
+ Elif root.value == value:
+ Return True
+ Elif value < root.value:
+ Return search(root.left, value)
+ Else:
+ Return search(root.right, value)
+# Criando um nó raiz
+Root = Node(10)
+# Inserindo valores na árvore
+
+Insert(root, 5)
+
+Insert(root, 15)
+Insert(root, 3)
+Insert(root, 12)
+# Pesquisando um valor na árvore
+If search(root, 12):
+ Print(“Valor 12 encontrado na árvore”)
+Else:
+ Print(“Valor 12 não encontrado na árvore”)
